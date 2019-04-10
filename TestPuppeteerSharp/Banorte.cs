@@ -34,7 +34,7 @@ namespace TestPuppeteerSharp
                 await page.GoToAsync("https://nbxi.banorte.com/NBXI/aaloginnew.aspx");
                 await page.WaitForTimeoutAsync(2000);
                 // Type into search box.
-                await page.TypeAsync("#txtUsuario", "luiseduardohd05");
+                await page.TypeAsync("#txtUsuario", user);
 
                 // Wait for suggest overlay to appear and click "show all results".
                 var aceptarSelector = "#btnAceptarUsuario";
@@ -45,7 +45,7 @@ namespace TestPuppeteerSharp
 
 
                 // Type into search box.
-                await page.TypeAsync("#txtBXIPassword", "p51c0pat");
+                await page.TypeAsync("#txtBXIPassword", password);
                 // Type into Token
                 Console.WriteLine("Token:");
                 await page.TypeAsync("#txtBXIToken", token);
